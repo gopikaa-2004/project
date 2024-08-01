@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('https://media.istockphoto.com/id/1163588010/photo/day.webp?b=1&s=170667a&w=0&k=20&c=LI6X_H6EyjNEoSh7lVztZ_J0LAbV83aLOUin5E8Vrqk=');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 10px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid #000;
+      outline: none;
+      color: #000;
+    }
+
+    .input-field label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      pointer-events: none;
+      transition: 0.5s;
+      color: #000;
+    }
+
+    .input-field input:focus ~ label,
+    .input-field input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #00dfc4;
+      font-size: 12px;
+    }
+
+    .forget {
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+    }
+
+    .forget input {
+      margin-right: 5px;
+    }
+
+    .forget a {
+      color: #00dfc4;
+      text-decoration: none;
+    }
+
+    .forget a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #00dfc4;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00bfa5;
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .register p {
+      color: #000;
+    }
+
+    .register a {
+      color: #00dfc4;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .register a:hover {
+      text-decoration: underline;
+    }
+
+    .signup-form {
+      display: none;
+    }
+
+    /* Footer Styles */
+    footer {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Login Form -->
+    <form id="login-form" class="login-form">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="text" required>
+        <label>Enter your Username</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class="register">
+        <p>Don't have an account? <a id="show-signup">Register</a></p>
+      </div>
+    </form>
+
+    <!-- Sign-Up Form -->
+    <form id="signup-form" class="signup-form">
+      <h2>Sign Up</h2>
+      <div class="input-field">
+        <input type="text" required>
+        <label>Enter your name</label>
+      </div>
+      <div class="input-field">
+        <input type="text" required>
+        <label>Enter your Username</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>Confirm your password</label>
+      </div>
+      <button type="submit">Sign Up</button>
+      <div class="register">
+        <p>Already have an account? <a id="show-login">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Career Guidance. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const showSignup = document.getElementById('show-signup');
+    const showLogin = document.getElementById('show-login');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+
+    showSignup.addEventListener('click', function() {
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+    });
+
+    showLogin.addEventListener('click', function() {
+      signupForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = 'home.html';
+    });
+
+    signupForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

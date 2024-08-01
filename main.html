@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Career Guidance</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero d-flex align-items-center">
+    <div class="hero-content text-center text-light">
+      <h1 class="display-4">Unlock Your Potential</h1>
+      <p class="lead">Discover the right career path for you with our expert guidance.</p>
+      <a href="#services" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+  </section>
+
+  <section id="services" class="py-5">
+    <div class="container text-center">
+      <h2 class="display-4 mb-4">Our Services</h2>
+      <div class="row">
+        <!-- Resume Building -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="resume-building.jpg" class="card-img-top" alt="Resume Building">
+            <div class="card-body">
+              <h5 class="card-title">Resume Building</h5>
+              <p class="card-text">Our resume building service helps you create a professional and impactful resume tailored to your career goals. We offer personalized feedback and suggestions to ensure your resume stands out to employers.</p>
+              <ul>
+                <li>Professional resume review</li>
+                <li>Personalized resume writing</li>
+                <li>Resume formatting and design</li>
+                <li>Keyword optimization for applicant tracking systems (ATS)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interview Preparation -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="interview-preparation.jpg" class="card-img-top" alt="Interview Preparation">
+            <div class="card-body">
+              <h5 class="card-title">Interview Preparation</h5>
+              <p class="card-text">Prepare for interviews with our comprehensive interview coaching. We offer mock interviews, feedback, and strategies to help you answer common questions confidently and professionally.</p>
+              <ul>
+                <li>Mock interviews with feedback</li>
+                <li>Interview question preparation</li>
+                <li>Strategies for behavioral and technical interviews</li>
+                <li>Confidence-building exercises</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Networking Opportunities -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="networking.jpg" class="card-img-top" alt="Networking Opportunities">
+            <div class="card-body">
+              <h5 class="card-title">Networking Opportunities</h5>
+              <p class="card-text">Expand your professional network with our networking events and resources. Connect with industry professionals, join relevant groups, and learn effective networking strategies.</p>
+              <ul>
+                <li>Access to networking events and webinars</li>
+                <li>Networking strategy workshops</li>
+                <li>Introduction to industry professionals</li>
+                <li>LinkedIn profile optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Search Strategies -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="job-search.jpg" class="card-img-top" alt="Job Search Strategies">
+            <div class="card-body">
+              <h5 class="card-title">Job Search Strategies</h5>
+              <p class="card-text">Learn effective job search techniques to find the right opportunities. Our strategies include how to research companies, tailor your applications, and follow up with potential employers.</p>
+              <ul>
+                <li>Job search strategy sessions</li>
+                <li>Company research techniques</li>
+                <li>Application customization tips</li>
+                <li>Follow-up and communication strategies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="display-4 mb-4">About Us</h2>
+      <p>We are dedicated to helping students and professionals find their ideal career paths through personalized guidance and resources. Our team of experts provides tailored support to help you achieve your career goals.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="display-4 text-center mb-4">Contact Us</h2>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-dark text-light text-center">
+    <p>&copy; 2024 Career Guidance. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
